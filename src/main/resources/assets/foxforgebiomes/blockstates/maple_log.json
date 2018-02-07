@@ -1,0 +1,8 @@
+{
+    "variants": {
+	    "axis=y":    { "model": "foxforgebiomes:maple_log" },
+	    "axis=z":    { "model": "foxforgebiomes:maple_log", "x": 90 },
+	    "axis=x":    { "model": "foxforgebiomes:maple_log", "x": 90, "y": 90 },
+	    "axis=none":    { "model": "foxforgebiomes:maple_bark" },
+	}
+}
