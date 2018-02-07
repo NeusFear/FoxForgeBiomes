@@ -1,0 +1,17 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "bottom": "blocks/dirt",
+            "top": "block/dead_grass_top",
+            "sides": "block/dead_grass_side"
+        },
+        "model": "cube_all",
+        "uvlock": true
+    },
+    "variants": {
+        "normal": [{
+
+        }]
+    }
+}

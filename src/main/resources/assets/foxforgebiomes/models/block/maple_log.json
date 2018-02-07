@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "foxforgebiomes:blocks/maple_log_top",
+        "side": "foxforgebiomes:blocks/maple_log"
+    }
+}
