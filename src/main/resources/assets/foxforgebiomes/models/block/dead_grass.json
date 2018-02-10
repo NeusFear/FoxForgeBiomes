@@ -1,17 +1,12 @@
 {
-    "forge_marker": 1,
-    "defaults": {
-        "textures": {
-            "bottom": "blocks/dirt",
-            "top": "block/dead_grass_top",
-            "sides": "block/dead_grass_side"
-        },
-        "model": "cube_all",
-        "uvlock": true
-    },
-    "variants": {
-        "normal": [{
-
-        }]
-    }
+	"parent": "block/cube",
+	"textures": {
+		"particle": "blocks/dirt",
+		"up": "foxforgebiomes:blocks/dead_grass_top",
+		"north": "foxforgebiomes:blocks/dead_grass_side",
+		"south": "foxforgebiomes:blocks/dead_grass_side",
+		"east": "foxforgebiomes:blocks/dead_grass_side",
+		"west": "foxforgebiomes:blocks/dead_grass_side",
+		"down": "blocks/dirt"
+	}
 }

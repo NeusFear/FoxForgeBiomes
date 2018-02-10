@@ -7,3 +7,5 @@ item.ruby.name=Ruby
 
 //Blocks
 tile.maple_log.name=Maple Log
+tile.aspen_log.name=Aspen Log
+tile.dead_grass.name=Dead Grass
