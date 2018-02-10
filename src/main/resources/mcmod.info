@@ -1,0 +1,14 @@
+[{
+  "modid": "foxforgebiomes",
+  "name": "FoxForge Biomes",
+  "description": "DESCRIPTION",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SkyForge", "Foxwar5"],
+  "credits": "Creadits",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}]

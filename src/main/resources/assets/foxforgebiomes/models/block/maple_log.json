@@ -1,7 +1,17 @@
 {
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "foxforgebiomes:blocks/maple_log_top",
-        "side": "foxforgebiomes:blocks/maple_log"
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "bottom": "block/maple_log_end",
+            "top": "block/maple_log_end",
+            "sides": "block/maple_log_side"
+        },
+        "model": "cube_all",
+        "uvlock": true
+    },
+    "variants": {
+        "normal": [{
+
+        }]
     }
 }
