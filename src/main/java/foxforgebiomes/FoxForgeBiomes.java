@@ -23,15 +23,11 @@ public class FoxForgeBiomes {
     @Mod.Instance
     public static FoxForgeBiomes instance;
 
-    @SidedProxy(clientSide = Reference.CLIENTSIDE_PATH, serverSide = Reference.SERVERSIDE_PATH)
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_PATH, serverSide = Reference.COMMON_PROXY_CLASS)
     public static CommonProxy proxy;
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event){
-        proxy.preInit(event);
-
-        FFBItems.init();
-    }
+    public void preInit(FMLPreInitializationEvent event){ proxy.preInit(event); }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){

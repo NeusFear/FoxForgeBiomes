@@ -1,9 +1,9 @@
 package foxforgebiomes.util.handlers;
 
 
-import foxforgebiomes.api.Block;
 import foxforgebiomes.init.FFBBlocks;
 import foxforgebiomes.init.FFBItems;
+import foxforgebiomes.util.IHasModel;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -15,12 +15,12 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event){
-        event.getRegistry().registerAll(FFBItems.toArray(new Item[0]));
+        event.getRegistry().registerAll(FFBItems.ITEMS.toArray(new Item[0]));
     }
 
     @SubscribeEvent
     public static void onBlockRegister(RegistryEvent.Register<net.minecraft.block.Block> event){
-        event.getRegistry().registerAll(FFBBlocks.toArray(new net.minecraft.block.Block[0]));
+        event.getRegistry().registerAll(FFBBlocks.BLOCKS.toArray(new net.minecraft.block.Block[0]));
     }
 
     @SubscribeEvent
@@ -31,7 +31,7 @@ public class RegistryHandler {
             }
         }
 
-        for(net.minecraft.block.Block block : FFBBlocks.ITEMS){
+        for(net.minecraft.block.Block block : FFBBlocks.BLOCKS){
             if(block instanceof IHasModel){
                 ((IHasModel)block).registerModels();
             }

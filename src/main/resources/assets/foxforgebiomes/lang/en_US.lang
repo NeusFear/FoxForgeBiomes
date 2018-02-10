@@ -1,0 +1,9 @@
+
+//Tabs
+itemGroup.tabFoxForgeBiomes=FoxForge Biomes
+
+//Items
+item.ruby.name=Ruby
+
+//Blocks
+tile.maple_log.name=Maple Log
