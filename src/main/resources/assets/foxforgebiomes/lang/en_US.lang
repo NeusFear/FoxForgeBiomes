@@ -6,6 +6,11 @@ itemGroup.tabFoxForgeBiomes=FoxForge Biomes
 item.ruby.name=Ruby
 
 //Blocks
-tile.maple_log.name=Maple Log
+tile.ash_log.name=Ash Log
 tile.aspen_log.name=Aspen Log
+tile.beech_log.name=Beech Log
 tile.dead_grass.name=Dead Grass
+tile.elm_log.name=Elm Log
+tile.maple_log.name=Maple Log
+tile.palm_log.name=Palm Log
+tile.redwood_log.name=Redwood Log
