@@ -6,6 +6,7 @@
 		"east": "foxforgebiomes:blocks/beech_planks",
 		"south": "foxforgebiomes:blocks/beech_planks",
 		"west": "foxforgebiomes:blocks/beech_planks",
-		"down": "foxforgebiomes:blocks/beech_planks"
+		"down": "foxforgebiomes:blocks/beech_planks",
+		"particle": "foxforgebiomes:blocks/beech_planks"
 	}
 }

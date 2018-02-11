@@ -6,6 +6,7 @@
 		"east": "foxforgebiomes:blocks/aspen_planks",
 		"south": "foxforgebiomes:blocks/aspen_planks",
 		"west": "foxforgebiomes:blocks/aspen_planks",
-		"down": "foxforgebiomes:blocks/aspen_planks"
+		"down": "foxforgebiomes:blocks/aspen_planks",
+		"particle": "foxforgebiomes:blocks/aspen_planks"
 	}
 }
