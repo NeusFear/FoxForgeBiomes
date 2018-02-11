@@ -1,10 +1,9 @@
 package foxforgebiomes.blocks;
 
-import foxforgebiomes.api.BasicBlock;
-import net.minecraft.block.material.Material;
+import foxforgebiomes.api.BasicPlanks;
 
-public class BlockAspenPlanks extends BasicBlock {
+public class BlockAspenPlanks extends BasicPlanks {
     public BlockAspenPlanks() {
-        super("aspen_planks", Material.WOOD, true);
+        super("aspen_planks");
     }
 }
