@@ -28,4 +28,5 @@ public class FFBBlocks {
     public static final Block ASPEN_PLANKS = new BlockAspenPlanks();
     public static final Block BEECH_PLANKS = new BlockBeechPlanks();
     public static final Block MAPLE_PLANKS = new BlockMaplePlanks();
+    public static final Block ELM_PLANKS = new BlockElmPlanks();
 }
