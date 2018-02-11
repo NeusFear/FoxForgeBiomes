@@ -22,4 +22,10 @@ public class FFBBlocks {
     public static final Block MAPLE_LOG = new BlockMapleLog();
     public static final Block PALM_LOG = new BlockPalmLog();
     public static final Block REDWOOD_LOG = new BlockRedwoodLog();
+
+    //Planks
+    public static final Block ASH_PLANKS = new BlockAshPlanks();
+    public static final Block ASPEN_PLANKS = new BlockAspenPlanks();
+    public static final Block BEECH_PLANKS = new BlockBeechPlanks();
+    public static final Block MAPLE_PLANKS = new BlockMaplePlanks();
 }

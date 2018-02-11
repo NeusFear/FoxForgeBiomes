@@ -1,0 +1,11 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"up": "foxforgebiomes:blocks/beech_planks",
+		"north": "foxforgebiomes:blocks/beech_planks",
+		"east": "foxforgebiomes:blocks/beech_planks",
+		"south": "foxforgebiomes:blocks/beech_planks",
+		"west": "foxforgebiomes:blocks/beech_planks",
+		"down": "foxforgebiomes:blocks/beech_planks"
+	}
+}
