@@ -22,6 +22,8 @@ public class BasicLog extends BasicBlock {
         super(name + "_log", Material.WOOD, true);
         this.setDefaultState(this.getDefaultState().withProperty(AXIS, BlockLog.EnumAxis.Y));
         this.setSoundType(SoundType.WOOD);
+        this.setHarvestLevel("axe", 0);
+        this.setHardness(1);
     }
 
     @Override
