@@ -1,0 +1,17 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "bottom": "block/cherry_log_end",
+            "top": "block/cherry_log_end",
+            "sides": "block/cherry_log_side"
+        },
+        "model": "cube_all",
+        "uvlock": true
+    },
+    "variants": {
+        "normal": [{
+
+        }]
+    }
+}
