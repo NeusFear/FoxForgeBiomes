@@ -26,5 +26,5 @@ public class BlockDeadGrass extends BasicBlock {
     public int quantityDropped(Random random) {
         return 1;
     }
-    
+
 }

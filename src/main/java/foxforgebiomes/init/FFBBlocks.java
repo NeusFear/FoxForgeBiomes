@@ -2,6 +2,7 @@ package foxforgebiomes.init;
 
 import foxforgebiomes.blocks.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class FFBBlocks {
     public static final Block ASH_LOG = new BlockAshLog();
     public static final Block ASPEN_LOG = new BlockAspenLog();
     public static final Block BEECH_LOG = new BlockBeechLog();
+    public static final Block CHERRY_BLOCK = new BlockCherryLog();
     public static final Block ELM_LOG = new BlockElmLog();
     public static final Block MAPLE_LOG = new BlockMapleLog();
     public static final Block PALM_LOG = new BlockPalmLog();
@@ -29,4 +31,11 @@ public class FFBBlocks {
     public static final Block BEECH_PLANKS = new BlockBeechPlanks();
     public static final Block MAPLE_PLANKS = new BlockMaplePlanks();
     public static final Block ELM_PLANKS = new BlockElmPlanks();
+
+    //Blocks
+    public static final Block REINFORCED_SANDSTONE = new BlockReinforcedSandstone();
+
+    //Slabs
+    public static final ReinforcedSandstoneSingleSlab REINFORCED_SANDSTONE_SINGLE_SLAB = new ReinforcedSandstoneSingleSlab();
+    public static final ReinforcedSandstoneDoubleSlab REINFORCED_SANDSTONE_DOUBLE_SLAB = new ReinforcedSandstoneDoubleSlab();
 }

@@ -19,3 +19,7 @@ tile.maple_log.name=Maple Wood
 tile.maple_planks.name=Maple Wood Planks
 tile.palm_log.name=Palm Wood
 tile.redwood_log.name=Redwood Wood
+
+tile.reinforced_sandstone.name=Reinforced Sandstone
+
+tile.reinforced_sandstone_single_slab.name=Reinforced Sandstone Slab

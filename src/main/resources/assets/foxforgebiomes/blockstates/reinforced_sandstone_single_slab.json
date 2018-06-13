@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "foxforgebiomes:reinforced_sandstone_slab_bottom" },
+        "half=top": { "model": "foxforgebiomes:reinforced_sandstone_slab_top" }
+    }
+}

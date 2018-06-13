@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"up": "foxforgebiomes:blocks/reinforced_sandstone_end",
+		"north": "foxforgebiomes:blocks/reinforced_sandstone",
+		"east": "foxforgebiomes:blocks/reinforced_sandstone",
+		"south": "foxforgebiomes:blocks/reinforced_sandstone",
+		"west": "foxforgebiomes:blocks/reinforced_sandstone",
+		"down": "foxforgebiomes:blocks/reinforced_sandstone_end",
+		"particle": "foxforgebiomes:blocks/reinforced_sandstone"
+	}
+}
