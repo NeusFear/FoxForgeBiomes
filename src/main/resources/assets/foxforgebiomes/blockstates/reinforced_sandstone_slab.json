@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "reinforced_sandstone_slab" },
+        "half=top": { "model": "reinforced_sandstone_slab_upper" }
+    }
+}

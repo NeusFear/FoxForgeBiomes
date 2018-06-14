@@ -10,7 +10,7 @@ import java.util.List;
 
 @Mod.EventBusSubscriber
 public class FFBBlocks {
-    public static final List<Block> BLOCKS = new ArrayList<Block>();
+    public static final List<Block> BLOCKS = new ArrayList<>();
 
     //Grasses
     public static final Block DEAD_GRASS = new BlockDeadGrass();
@@ -36,6 +36,7 @@ public class FFBBlocks {
     public static final Block REINFORCED_SANDSTONE = new BlockReinforcedSandstone();
 
     //Slabs
-    public static final ReinforcedSandstoneSingleSlab REINFORCED_SANDSTONE_SINGLE_SLAB = new ReinforcedSandstoneSingleSlab();
-    public static final ReinforcedSandstoneDoubleSlab REINFORCED_SANDSTONE_DOUBLE_SLAB = new ReinforcedSandstoneDoubleSlab();
+    public static final Block REINFORCED_SANDSTONE_SLAB = new ReinforcedSandstoneSlab(false);
+    public static final Block REINFORCED_SANDSTONE_SLAB_FULL = new ReinforcedSandstoneSlab(true);
+
 }
