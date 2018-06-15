@@ -1,61 +1,42 @@
 package foxforgebiomes.api;
 
 import foxforgebiomes.init.FFBBlocks;
-import foxforgebiomes.init.FFBItems;
 import foxforgebiomes.init.FFBTabs;
-import foxforgebiomes.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
-
-import java.util.Locale;
 import java.util.Random;
 
-public abstract class BasicSlab extends BlockSlab implements IHasModel {
+public abstract class BasicSlab extends BasicBlock {
 
-    private final String name;
     private final boolean doubleSlab;
-    protected static final PropertyEnum<DummyEnum> DUMMY;
 
-    static {
-        DUMMY = PropertyEnum.create("dummy", DummyEnum.class);
-    }
+    public static final PropertyEnum<BasicSlab.EnumBlockHalf> HALF = PropertyEnum.<BasicSlab.EnumBlockHalf>create("half", BasicSlab.EnumBlockHalf.class);
+    protected static final AxisAlignedBB AABB_BOTTOM_HALF = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
+    protected static final AxisAlignedBB AABB_TOP_HALF = new AxisAlignedBB(0.0D, 0.5D, 0.0D, 1.0D, 1.0D, 1.0D);
 
-    public BasicSlab(boolean full, Material mat, String name) {
-        super(mat);
-        this.name = name;
-        setUnlocalizedName(name);
-        setRegistryName(name);
+    public BasicSlab(String name, Material material, boolean full) {
+        super(name, material, !full);
         doubleSlab = full;
         if(!full) {
             setCreativeTab(FFBTabs.tabFoxForgeBiomes);
             useNeighborBrightness = true;
             FFBBlocks.BLOCKS.add(this);
         }
-        setDefaultState(blockState.getBaseState().withProperty(HALF, BlockSlab.EnumBlockHalf.BOTTOM).withProperty(DUMMY, DummyEnum.SINGLETON));
-    }
-
-    @Nonnull
-    @Override
-    public BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, HALF, getVariantProperty());
+        setDefaultState(blockState.getBaseState().withProperty(HALF, EnumBlockHalf.BOTTOM));
     }
 
     @Nonnull
@@ -64,7 +45,7 @@ public abstract class BasicSlab extends BlockSlab implements IHasModel {
         if (doubleSlab) {
             return getDefaultState();
         } else {
-            return getDefaultState().withProperty(HALF, meta == 8 ? BlockSlab.EnumBlockHalf.TOP : BlockSlab.EnumBlockHalf.BOTTOM);
+            return getDefaultState().withProperty(HALF, meta == 8 ? EnumBlockHalf.TOP : EnumBlockHalf.BOTTOM);
         }
     }
 
@@ -73,13 +54,13 @@ public abstract class BasicSlab extends BlockSlab implements IHasModel {
         if (doubleSlab) {
             return 0;
         } else {
-            return state.getValue(HALF) == BlockSlab.EnumBlockHalf.TOP ? 8 : 0;
+            return state.getValue(HALF) == EnumBlockHalf.TOP ? 8 : 0;
         }
     }
 
-    public abstract BlockSlab getFullBlock();
+    public abstract Block getFullBlock();
 
-    public abstract BlockSlab getSingleBlock();
+    public abstract Block getSingleBlock();
 
     @Nonnull
     @Override
@@ -99,42 +80,27 @@ public abstract class BasicSlab extends BlockSlab implements IHasModel {
         return new ItemStack(getSingleBlock());
     }
 
-    @Nonnull
-    @Override
-    public String getUnlocalizedName(int i) {
-        return name;
-    }
-
-    @Override
-    public final boolean isDouble() {
-        return doubleSlab;
-    }
-
-    @Nonnull
-    @Override
-    public final IProperty getVariantProperty() {
-        return DUMMY; // Vanilla expects us to store different kinds of slabs into one block ID. Except we don't. We need this dummy property and dummy value to satisfy it.
-    }
-
-    @Nonnull
-    @Override
-    public final Comparable<?> getTypeForItem(@Nonnull ItemStack stack) {
-        return DummyEnum.SINGLETON;
-    }
-
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public void registerModels() {
-    }
-
-    private enum DummyEnum implements IStringSerializable {
-        SINGLETON {
-            @Nonnull
-            @Override
-            public String getName() {
-                return name().toLowerCase(Locale.ROOT);
-            }
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
+        if (doubleSlab)
+        {
+            return FULL_BLOCK_AABB;
         }
+        else
+        {
+            return state.getValue(HALF) == EnumBlockHalf.TOP ? AABB_TOP_HALF : AABB_BOTTOM_HALF;
+        }
+    }
+
+    public static enum EnumBlockHalf implements IStringSerializable {
+        TOP("top"),
+        BOTTOM("bottom");
+
+        private final String name;
+
+        private EnumBlockHalf(String name) { this.name = name; }
+
+        public String toString() { return this.name; }
+
+        public String getName() { return this.name; }
     }
 }

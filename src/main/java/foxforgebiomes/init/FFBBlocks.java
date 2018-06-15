@@ -2,7 +2,6 @@ package foxforgebiomes.init;
 
 import foxforgebiomes.blocks.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSlab;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.ArrayList;
